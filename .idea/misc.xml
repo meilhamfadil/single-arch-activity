@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/layout/layout_header_menu.xml" value="0.25" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/layout/single_activity.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/core/src/main/res/drawable/gradient_header.xml" value="0.1" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/core/src/main/res/drawable/icon_back.xml" value="0.1" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/core/src/main/res/drawable/icon_favorite.xml" value="0.1" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/core/src/main/res/drawable/icon_favorite_filled.xml" value="0.1" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/core/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/core/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/fragment_category.xml" value="0.33" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/fragment_category_vocab.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/fragment_favorite.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/fragment_sentence.xml" value="0.25" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/fragment_vocab.xml" value="0.22" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/fragment_vocabs.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/fragment_word.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/item_category.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/item_category_vocab.xml" value="0.25" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/item_favorite.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/item_sentence.xml" value="0.22" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/item_vocab.xml" value="0.22" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/item_vocabs.xml" value="0.1685185185185185" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/layout/item_word.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/menu/menu_sentence.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/nippobulary/features/learn/src/main/res/menu/menu_vocab.xml" value="0.1" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/app/src/main/res/layout/layout_header_menu.xml" value="0.1953125" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/app/src/main/res/layout/single_activity.xml" value="0.1953125" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/app/src/main/res/menu/main_menu.xml" value="0.1953125" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/app/src/main/res/xml/file_paths.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/empty.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/gradient_header.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/ic_back.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/kdz_button_primary.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/kdz_state_secondary_button.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/kdz_state_teriary_button.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/kdz_state_tertiary_button.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/state_button_primary.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/drawable/state_button_tertiary.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/layout/app_dropdown_item.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/layout/app_message.xml" value="0.25" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/layout/app_progress.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/layout/kdz_dialog_message.xml" value="0.25" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/layout/kdz_primary_button.xml" value="0.3137254901960784" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/layout/kdz_secondary_button.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/core/src/main/res/layout/kdz_tertiary_button.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/example/src/main/res/layout/activity_landing.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/example/src/main/res/layout/activity_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/example/src/main/res/layout/fragment_detail.xml" value="0.33" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/example/src/main/res/layout/fragment_movie.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/example/src/main/res/layout/item_movie.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/drawable/ic_launcher_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/layout/activity_landing.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/layout/activity_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/layout/fragment_movie.xml" value="0.25" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/layout/fragment_moview.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/layout/fragment_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/layout/item_movie.xml" value="0.209375" />
+        <entry key="..\:/Users/meilh/StudioProjects/single-arch/features/landing/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22552083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

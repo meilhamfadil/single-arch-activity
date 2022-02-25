@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/kdz_state_primary_button"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:minHeight="@dimen/kdz_standard_min_height_component"
+        android:outlineAmbientShadowColor="@color/color_primary"
+        android:outlineSpotShadowColor="@color/color_primary"
+        android:padding="@dimen/kdz_base_content_padding"
+        tools:ignore="UnusedAttribute">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/kdz_base_icon_size"
+            android:layout_height="@dimen/kdz_base_icon_size"
+            android:contentDescription="@string/app_empty"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:gravity="center"
+                android:textColor="@color/kdz_state_primary_button"
+                tools:text="Action Button" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="@dimen/kdz_base_icon_size"
+                android:layout_height="@dimen/kdz_base_icon_size"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/color_white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</merge>
+
+
+
+
+
+
+
+
+
+

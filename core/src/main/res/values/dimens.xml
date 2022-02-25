@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base -->
+    <dimen name="kdz_base_radius">8dp</dimen>
+    <dimen name="kdz_base_content_padding">12dp</dimen>
+    <dimen name="kdz_base_icon_size">24dp</dimen>
+    <dimen name="kdz_base_big_icon_size">32dp</dimen>
+
+    <!-- Standard -->
+    <dimen name="kdz_standard_min_height_component">48dp</dimen>
+
+    <!-- Common -->
+    <dimen name="kdz_common_content_padding_horizontal">16dp</dimen>
+    <dimen name="kdz_common_content_padding_vertical">8dp</dimen>
+
+</resources>

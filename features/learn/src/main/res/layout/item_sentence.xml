@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@id/favorite"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:textColor="@color/color_tertiary_pressed"
+                android:textSize="16sp"
+                tools:text="Selamat beristirahat." />
+
+            <TextView
+                android:id="@+id/kanji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/color_black"
+                android:textSize="20sp"
+                tools:text="Sentence" />
+
+            <TextView
+                android:id="@+id/hiragana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/color_secondary_pressed"
+                android:textSize="20sp"
+                tools:text="Sentence" />
+
+            <TextView
+                android:id="@+id/romanji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/color_primary_pressed"
+                android:textSize="16sp"
+                tools:text="Sentence" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/favorite"
+            style="@style/Clickable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_favorite" />
+
+        <ImageView
+            android:id="@+id/speak_out"
+            style="@style/Clickable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/favorite"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/icon_speak" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

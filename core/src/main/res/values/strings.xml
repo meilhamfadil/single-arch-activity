@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Example</string>
+    <string name="app_name_short">Example</string>
+    <string name="app_vendor">Kudzoza</string>
+    <string name="app_email">kudzoza@gmail.com</string>
+
+    <!-- Label -->
+    <string name="app_add">Add</string>
+    <string name="app_remove">Remove</string>
+    <string name="app_yes">Yes</string>
+    <string name="app_cancel">Cancel</string>
+    <string name="app_no">No</string>
+    <string name="app_save">Save</string>
+    <string name="app_send">Send</string>
+    <string name="app_refresh">Refresh</string>
+    <string name="app_ok">OK</string>
+    <string name="app_message">Message</string>
+    <string name="app_double_back">Press back again to exit</string>
+    <string name="app_empty" />
+
+</resources>

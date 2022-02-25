@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="learn_title_vocab">Kosa Kata</string>
+    <string name="learn_title_favorite">Favorit</string>
+    <string name="learn_title_sentence">Kalimat</string>
+    <string name="learn_title_category">Kategori Kalimat</string>
+    <string name="learn_title_category_vocab">Kategori Kosa Kata</string>
+
+    <string name="learn_hide_word">Sembunyikan Kata</string>
+    <string name="learn_hide_kanji">Sembunyikan Kanji</string>
+    <string name="learn_hide_romanji">Sembunyikan Romanji</string>
+    <string name="learn_hide_hiragana">Sembunyikan Hiragana</string>
+
+    <string name="learn_show_word">Tampilan Kata</string>
+    <string name="learn_show_kanji">Tampilkan Kanji</string>
+    <string name="learn_show_romanji">Tampilkan Romanji</string>
+    <string name="learn_show_hiragana">Tampilkan Hiragana</string>
+
+    <string name="learn_word_hiragana">Hiragana</string>
+    <string name="learn_word_katakana">Katakana</string>
+
+    <string name="learn_search">Cari</string>
+
+</resources>

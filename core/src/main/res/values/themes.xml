@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="toolbarStyle">@style/DefaultToolbar</item>
+        <item name="colorPrimaryDark">@color/color_secondary_pressed</item>
+        <item name="toolbarNavigationButtonStyle">@style/DefaultToolbarNavigation</item>
+        <item name="android:textColorSecondary">@color/color_white</item>
+        <item name="android:windowBackground">@color/color_white</item>
+    </style>
+
+    <style name="DefaultToolbarNavigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="tint">@color/color_primary</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="android:colorControlHighlight">@color/ripple_material_dark</item>
+    </style>
+
+    <style name="DefaultToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/color_primary</item>
+        <item name="android:background">@color/color_tertiary</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="android:colorControlHighlight">@color/ripple_material_dark</item>
+    </style>
+
+    <style name="DefaultTextAppearance">
+        <item name="fontFamily">@font/open_sans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_gray_dark</item>
+    </style>
+
+    <style name="DefaultInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="fontFamily">@font/open_sans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/state_input_hint</item>
+        <item name="hintTextColor">@color/state_input_hint</item>
+        <item name="startIconTint">@color/state_input_layout</item>
+        <item name="endIconTint">@color/state_input_layout</item>
+        <item name="passwordToggleTint">@color/color_gray</item>
+        <item name="boxBackgroundColor">@color/color_white</item>
+        <item name="boxStrokeColor">@color/state_input_layout</item>
+        <item name="boxStrokeWidth">0.8dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="prefixTextAppearance">@style/DefaultTextAppearance</item>
+        <item name="prefixTextColor">@color/color_gray_dark</item>
+        <item name="boxStrokeWidthFocused">0.8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+    </style>
+
+    <style name="DefaultSpinner" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="fontFamily">@font/open_sans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/state_input_hint</item>
+        <item name="hintTextColor">@color/state_input_hint</item>
+        <item name="startIconTint">@color/state_input_layout</item>
+        <item name="endIconTint">@color/state_input_layout</item>
+        <item name="passwordToggleTint">@color/color_gray</item>
+        <item name="boxBackgroundColor">@color/color_white</item>
+        <item name="boxStrokeColor">@color/state_input_layout</item>
+        <item name="boxStrokeWidth">0.8dp</item>
+        <item name="boxStrokeWidthFocused">0.8dp</item>
+        <item name="prefixTextAppearance">@style/DefaultTextAppearance</item>
+        <item name="prefixTextColor">@color/color_gray_dark</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+    </style>
+
+    <style name="DefaultEditText">
+        <item name="fontFamily">@font/open_sans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_gray_dark</item>
+    </style>
+
+    <style name="Clickable">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+</resources>

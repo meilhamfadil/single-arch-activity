@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_switch_hiragana"
+        android:icon="@drawable/icon_word"
+        android:title="@string/learn_word_hiragana"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_switch_katakana"
+        android:icon="@drawable/icon_word"
+        android:title="@string/learn_word_katakana"
+        app:showAsAction="ifRoom" />
+
+</menu>

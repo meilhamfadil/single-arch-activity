@@ -1,0 +1,29 @@
+android {
+    flavorDimensions "version"
+
+    productFlavors {
+        development {
+            buildConfigField 'String', 'API_URL', '"https://meilhamfadil.github.io"'
+        }
+
+        demo {
+            applicationIdSuffix ".demo"
+            buildConfigField 'String', 'API_URL', '"https://meilhamfadil.github.io"'
+        }
+
+        production {
+            buildConfigField 'String', 'API_URL', '"https://meilhamfadil.github.io"'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def appName = "Example"
+            def versionName = variant.versionName
+            def versionCode = variant.versionCode // e.g 1.0
+            def flavorName = variant.flavorName // e. g. Free
+
+            outputFileName = "${appName}-v${versionName}(${versionCode})-${flavorName}.apk"
+        }
+    }
+}

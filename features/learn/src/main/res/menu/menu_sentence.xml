@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/icon_search"
+        android:title="@string/learn_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_show_word"
+        android:title="@string/learn_show_word" />
+
+    <item
+        android:id="@+id/menu_hide_word"
+        android:title="@string/learn_hide_word" />
+
+    <item
+        android:id="@+id/menu_show_kanji"
+        android:title="@string/learn_show_kanji" />
+
+    <item
+        android:id="@+id/menu_hide_kanji"
+        android:title="@string/learn_hide_kanji" />
+
+    <item
+        android:id="@+id/menu_show_hiragana"
+        android:title="@string/learn_show_hiragana" />
+
+    <item
+        android:id="@+id/menu_hide_hiragana"
+        android:title="@string/learn_hide_hiragana" />
+
+    <item
+        android:id="@+id/menu_show_romanji"
+        android:title="@string/learn_show_romanji" />
+
+    <item
+        android:id="@+id/menu_hide_romanji"
+        android:title="@string/learn_hide_romanji" />
+
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/example_navigation">
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="id.kudzoza.example.example.screen.movie.MovieFragment"
+        android:label="MovieFragment">
+        <deepLink app:uri="android-app://${applicationId}/movie" />
+        <action
+            android:id="@+id/action_movieFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="id.kudzoza.example.example.screen.detail.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="MOVIE"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
