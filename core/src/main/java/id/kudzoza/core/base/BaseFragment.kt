@@ -1,22 +1,13 @@
 package id.kudzoza.core.base
 
 import android.os.Bundle
-import android.os.Process
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.net.toUri
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
-import id.kudzoza.core.AppNavigator
-import id.kudzoza.core.helper.EventHelper
-import id.kudzoza.core.util.hideProgress
-import id.kudzoza.core.util.showProgress
 import id.kudzoza.core.util.showSnackBar
 
 /**
@@ -30,8 +21,8 @@ abstract class BaseFragment<VB : ViewBinding>(
 
     val binding by lazy { viewBinding.invoke(LayoutInflater.from(requireContext())) }
     val rootView by lazy { binding.root }
-
     var isViewed = false
+    lateinit var parentVM: BaseViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,62 +31,74 @@ abstract class BaseFragment<VB : ViewBinding>(
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         Log.d("BACK-STACK", findNavController().backQueue.size.toString())
-
-        return binding.root
+        return rootView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        parentVM = registerViewModel()
 
-        setUpHelperEvent()
+        setUpBaseEvent()
         registerObserver()
-
         arguments?.let { onReceivedData(it) }
         onViewReady()
+        isViewed = true
     }
 
-    open fun onViewReady() {}
+    private fun setUpBaseEvent() {
+        parentVM.apply {
+            eventShowMessage.observe(viewLifecycleOwner) {
+                binding.root.showSnackBar(it)
+            }
 
-    open fun registerObserver() {}
+            eventShowMessageRes.observe(viewLifecycleOwner) {
+                binding.root.showSnackBar(it)
+            }
+        }
+    }
 
+    /**
+     * onReceivedData\
+     * this method will be launch if there is any arguments on the fragment
+     */
     open fun onReceivedData(bundle: Bundle) {}
 
-    fun navigateTo(target: Int, bundle: Bundle = bundleOf()) {
-        findNavController().navigate(target, bundle)
-    }
+    /**
+     * getActivityContract
+     * if there is any chance that you need something from Main Activity
+     * you can use this method for get the Activity Contract Object
+     */
+    fun getActivityContract() = requireActivity() as ActivityContract
 
-    fun navigateTo(uri: String) {
-        try {
-            val target = NavDeepLinkRequest.Builder
-                .fromUri(uri.toUri())
-                .build()
-            findNavController().navigate(target)
-        } catch (e: Exception) {
-            EventHelper.message.value = e.message
-        }
-    }
+    /**
+     * registerViewModel
+     * to be overridden on the main fragment class
+     * this method used to register viewModel to parentVM
+     * so this base fragment can access the BaseViewModel object
+     */
+    abstract fun registerViewModel(): BaseViewModel
 
-    private fun setUpHelperEvent() {
-        EventHelper.apply {
-            busy.observe(this@BaseFragment, Observer {
-                if (it) requireActivity().showProgress()
-                else requireActivity().hideProgress()
-            })
+    /**
+     * registerObserver
+     * to be overridden on the main fragment class
+     * this method will be launch after
+     * - setupBaseEvent has been called
+     *
+     * this method will register all the main event inside fragment
+     */
+    abstract fun registerObserver()
 
-            message.observe(this@BaseFragment, Observer {
-                binding.root.showSnackBar(it)
-            })
-
-            messageResource.observe(this@BaseFragment, Observer {
-                binding.root.showSnackBar(it)
-            })
-
-            finish.observe(this@BaseFragment, Observer {
-                requireActivity().finish()
-            })
-        }
-    }
-
-    fun requireApplication() = requireContext()
+    /**
+     * onViewReady
+     * to be overridden on the main fragment class
+     * this method will be launch after
+     * - registerViewModel has been called
+     * - setupBaseEvent has been called
+     * - registerObserver has been called
+     * - onReceivedData has been called, if there is any args
+     *
+     * this method will contain all the main logic for fragment
+     */
+    abstract fun onViewReady()
 
 }

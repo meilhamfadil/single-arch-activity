@@ -9,6 +9,7 @@ import android.app.Dialog
 
 object ScreenObject {
 
+    var busyDialog: Dialog? = null
     var progressDialog: Dialog? = null
     var messageDialog: Dialog? = null
 

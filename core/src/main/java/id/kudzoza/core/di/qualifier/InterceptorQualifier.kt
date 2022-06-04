@@ -9,4 +9,12 @@ import javax.inject.Qualifier
 
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
+annotation class HeaderInterceptor
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class LoggerInterceptor
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
 annotation class ChuckInterceptor

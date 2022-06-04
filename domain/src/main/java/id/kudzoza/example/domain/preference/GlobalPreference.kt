@@ -2,6 +2,7 @@ package id.kudzoza.example.domain.preference
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import androidx.core.content.edit
 import dagger.hilt.android.qualifiers.ApplicationContext
 import id.kudzoza.core.AppConfig.DEFAULT_LANGUAGE
@@ -19,13 +20,10 @@ import javax.inject.Inject
  * on 08/02/2022
  **/
 class GlobalPreference @Inject constructor(
-    @ApplicationContext private val context: Context,
-    @EnvApplicationId private val applicationId: String,
     @EnvVersionName private val versionName: String,
     @EnvVersionCode private val versionCode: Int,
+    private val preferences : SharedPreferences
 ) {
-
-    private val preferences by lazy { context.getSharedPreferences(applicationId, MODE_PRIVATE) }
 
     fun storeAccessToken(token: String) {
         preferences.edit {

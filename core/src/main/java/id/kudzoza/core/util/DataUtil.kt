@@ -76,7 +76,7 @@ fun <T> rSuccess(data: T?) = Resource.Success(data)
 fun rError(message: String) = Resource.Error(message)
 fun rFinish() = Resource.Finish
 
-fun json(data: Any): String? = Gson().toJson(data)
+fun json(data: Any): String = Gson().toJson(data)
 
 fun <T> toObject(value: String?, classOfT: Class<T>): T? =
     if (value.isNullOrEmpty()) null

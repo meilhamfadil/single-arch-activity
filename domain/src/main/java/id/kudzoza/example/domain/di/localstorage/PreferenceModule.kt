@@ -1,4 +1,4 @@
-package id.kudzoza.example.domain.di
+package id.kudzoza.example.domain.di.localstorage
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
@@ -7,6 +7,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import id.kudzoza.core.di.qualifier.EnvApplicationId
 import javax.inject.Singleton

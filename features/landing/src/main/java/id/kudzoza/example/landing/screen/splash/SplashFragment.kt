@@ -5,6 +5,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import id.kudzoza.core.AppNavigator
 import id.kudzoza.core.base.BaseFragment
+import id.kudzoza.core.helper.NavigationHelper.navigateModule
 import id.kudzoza.example.landing.databinding.FragmentSplashBinding
 
 /**
@@ -18,10 +19,14 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(
 ) {
     private val vm: SplashVM by viewModels()
 
+    override fun registerViewModel() = vm
+
+    override fun onViewReady() {}
+
     override fun registerObserver() = with(vm) {
         moveToMain.observe(requireActivity()) {
             findNavController().popBackStack()
-            navigateTo(AppNavigator.featMovies)
+            findNavController().navigateModule(AppNavigator.featMovies)
         }
     }
 

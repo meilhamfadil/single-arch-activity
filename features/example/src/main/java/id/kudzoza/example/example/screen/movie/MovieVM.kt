@@ -2,8 +2,8 @@ package id.kudzoza.example.example.screen.movie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import id.kudzoza.core.base.BaseViewModel
 import id.kudzoza.core.data.model.Resource
 import id.kudzoza.core.util.launch
 import id.kudzoza.core.util.main
@@ -20,7 +20,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MovieVM @Inject constructor(
     private val movieUseCase: MovieUseCase,
-) : ViewModel() {
+) : BaseViewModel() {
 
     private val _movieList: MutableLiveData<Resource<List<MovieModel>>> = MutableLiveData()
     val movieList: LiveData<Resource<List<MovieModel>>> get() = _movieList
@@ -31,9 +31,7 @@ class MovieVM @Inject constructor(
 
     fun getMovies() = launch {
         movieUseCase.getMovies().collect {
-            main {
-                _movieList.value = it
-            }
+            main { _movieList.value = it }
         }
     }
 

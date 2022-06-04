@@ -17,8 +17,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import id.kudzoza.core.AppConfig
 import id.kudzoza.core.R
-import id.kudzoza.core.helper.EventHelper
-import kotlin.reflect.KFunction0
 
 /**
  * Created by Kudzoza
@@ -149,6 +147,7 @@ fun watchEditText(
 }
 
 fun RecyclerView.onTouchEnd(
+    otherCondition: Boolean = true,
     action: () -> Unit,
 ) {
     this.addOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -161,9 +160,7 @@ fun RecyclerView.onTouchEnd(
             val firstVisible =
                 (layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
 
-            if (
-                EventHelper.requesting.value == false &&
-                (
+            if (otherCondition && (
                         (visibleCount + firstVisible) >= totalCount &&
                                 firstVisible >= 0 &&
                                 totalCount >= AppConfig.DEFAULT_API_LIMIT

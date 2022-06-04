@@ -7,6 +7,6 @@ import androidx.lifecycle.ViewModel
  * on 30/12/2021
  **/
 
-class MainSingleVM() : ViewModel() {
+class ParentVM() : ViewModel() {
 
 }

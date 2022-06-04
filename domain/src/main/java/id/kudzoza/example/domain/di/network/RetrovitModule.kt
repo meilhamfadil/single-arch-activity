@@ -1,4 +1,4 @@
-package id.kudzoza.example.domain.di
+package id.kudzoza.example.domain.di.network
 
 import dagger.Module
 import dagger.Provides
@@ -19,7 +19,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object ServiceModule {
+object RetrovitModule {
 
     @DefaultRetrofitClient
     @Provides

@@ -3,8 +3,8 @@ package id.kudzoza.example.example.screen.detail
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
-import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import id.kudzoza.core.base.BaseViewModel
 import id.kudzoza.core.util.toObject
 import id.kudzoza.example.domain.model.MovieModel
 import javax.inject.Inject
@@ -17,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class DetailVM @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
-) : ViewModel() {
+) : BaseViewModel() {
 
     private val _movie: MutableLiveData<MovieModel?> = MutableLiveData()
     val movie: LiveData<MovieModel?> get() = _movie

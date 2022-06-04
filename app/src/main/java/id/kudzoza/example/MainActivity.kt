@@ -2,16 +2,14 @@ package id.kudzoza.example
 
 import android.os.Bundle
 import android.os.Handler
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import dagger.hilt.android.AndroidEntryPoint
 import id.kudzoza.core.base.ActivityContract
 import id.kudzoza.example.databinding.SingleActivityBinding
 import android.os.Looper
-import android.util.Log
-import androidx.navigation.fragment.findNavController
-import id.kudzoza.core.util.json
+import com.google.firebase.messaging.FirebaseMessaging
+import id.kudzoza.core.di.qualifier.EnvApplicationAuthorities
 import id.kudzoza.core.util.showSnackBar
 
 
@@ -21,7 +19,7 @@ import id.kudzoza.core.util.showSnackBar
  **/
 
 @AndroidEntryPoint
-class MainSingleActivity : AppCompatActivity(), ActivityContract {
+class MainActivity : AppCompatActivity(), ActivityContract {
 
     private val binding by lazy { SingleActivityBinding.inflate(layoutInflater) }
     private var backExit = false
@@ -49,6 +47,10 @@ class MainSingleActivity : AppCompatActivity(), ActivityContract {
                 )
             }
         }
+    }
+
+    override fun subscribeFirebase(channel: String) {
+        FirebaseMessaging.getInstance().subscribeToTopic(channel)
     }
 
 }
