@@ -3,7 +3,7 @@ package id.kudzoza.core.util
 import com.google.gson.Gson
 import id.kudzoza.core.data.model.ApiModel
 import id.kudzoza.core.data.model.Payload
-import id.kudzoza.core.data.model.Resource
+import id.kudzoza.core.data.model.DataState
 import retrofit2.HttpException
 import java.net.ConnectException
 import java.net.SocketTimeoutException
@@ -71,10 +71,10 @@ fun <T> success(data: T? = null, message: String = "OK") = Payload(
     data = data
 )
 
-fun rLoading() = Resource.Loading
-fun <T> rSuccess(data: T?) = Resource.Success(data)
-fun rError(message: String) = Resource.Error(message)
-fun rFinish() = Resource.Finish
+fun loadingState() = DataState.Loading
+fun <T> successState(data: T?) = DataState.Success(data)
+fun errorState(message: String) = DataState.Error(message)
+fun finishState() = DataState.Finish
 
 fun json(data: Any): String = Gson().toJson(data)
 

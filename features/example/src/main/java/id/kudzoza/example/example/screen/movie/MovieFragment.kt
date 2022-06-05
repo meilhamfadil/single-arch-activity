@@ -1,12 +1,12 @@
 package id.kudzoza.example.example.screen.movie
 
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import id.kudzoza.core.base.BaseFragment
-import id.kudzoza.core.data.model.Resource
+import id.kudzoza.core.data.model.*
 import id.kudzoza.core.util.catchToNull
-import id.kudzoza.core.util.json
 import id.kudzoza.example.domain.model.MovieModel
 import id.kudzoza.example.example.databinding.FragmentMovieBinding
 
@@ -48,23 +48,24 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(
     override fun registerObserver() = with(vm) {
         movieList.observe(viewLifecycleOwner, ::eventMovieList)
         eventMovieClicked.observe(viewLifecycleOwner) {
-            MovieFragmentDirections.actionMovieFragmentToDetailFragment(json(it))
+            val action = MovieFragmentDirections.actionMovieFragmentToDetailFragment(it)
+            findNavController().navigate(action)
         }
     }
 
-    private fun eventMovieList(movies: Resource<List<MovieModel>>) = with(binding) {
-        when (movies) {
-            is Resource.Loading -> {
+    private fun eventMovieList(movies: DataState<List<MovieModel>>) = with(binding) {
+        movies.resource {
+            loading {
                 action.setLoading(true)
                 refresh.isRefreshing = true
             }
-            is Resource.Success -> {
-                movieAdapter?.replaceAll(movies.data.orEmpty())
+            success {
+                movieAdapter?.replaceAll(it.orEmpty())
             }
-            is Resource.Error -> {
-                vm.eventShowMessage.value = movies.message
+            error {
+                vm.eventShowMessage.value = it.message
             }
-            is Resource.Finish -> {
+            finish {
                 action.setLoading(false)
                 refresh.isRefreshing = false
             }

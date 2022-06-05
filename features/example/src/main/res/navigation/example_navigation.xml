@@ -19,7 +19,7 @@
         android:label="DetailFragment">
         <argument
             android:name="MOVIE"
-            app:argType="string" />
+            app:argType="id.kudzoza.example.domain.model.MovieModel" />
     </fragment>
 
 </navigation>

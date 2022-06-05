@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import id.kudzoza.core.base.BaseViewModel
 import id.kudzoza.core.base.SingleLiveEvent
-import id.kudzoza.core.data.model.Resource
+import id.kudzoza.core.data.model.DataState
 import id.kudzoza.core.util.launch
 import id.kudzoza.core.util.main
 import id.kudzoza.example.domain.model.MovieModel
@@ -25,8 +25,8 @@ class MovieVM @Inject constructor(
     private val movieUseCase: MovieUseCase,
 ) : BaseViewModel() {
 
-    private val _movieList: MutableLiveData<Resource<List<MovieModel>>> = MutableLiveData()
-    val movieList: LiveData<Resource<List<MovieModel>>> get() = _movieList
+    private val _movieList: MutableLiveData<DataState<List<MovieModel>>> = MutableLiveData()
+    val movieList: LiveData<DataState<List<MovieModel>>> get() = _movieList
     val eventMovieClicked: SingleLiveEvent<MovieModel> = SingleLiveEvent()
 
     fun callEvent(event: MovieEvent) {

@@ -1,4 +1,4 @@
-package id.kudzoza.example.domain.di
+package id.kudzoza.example.domain.di.network
 
 import dagger.Module
 import dagger.Provides

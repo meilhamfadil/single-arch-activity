@@ -3,8 +3,8 @@ package id.kudzoza.example.domain.di
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.components.SingletonComponent
+import id.kudzoza.example.domain.payload.MovieMapper
 import id.kudzoza.example.domain.preference.GlobalPreference
 import id.kudzoza.example.domain.repository.MovieRepository
 import id.kudzoza.example.domain.usecase.MovieUseCase
@@ -24,8 +24,9 @@ object DataModule {
     fun provideMovieUseCase(
         movieRepository: MovieRepository,
         globalPreference: GlobalPreference,
+        movieMapper: MovieMapper,
     ): MovieUseCase {
-        return MovieUseCase(movieRepository, globalPreference)
+        return MovieUseCase(movieRepository, globalPreference, movieMapper)
     }
 
 }

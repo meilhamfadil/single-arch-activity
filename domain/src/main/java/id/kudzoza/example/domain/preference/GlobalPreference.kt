@@ -15,6 +15,7 @@ import javax.inject.Inject
  * Created by Kudzoza
  * on 08/02/2022
  **/
+
 class GlobalPreference
 @Inject constructor(
     @EnvVersionName private val versionName: String,
