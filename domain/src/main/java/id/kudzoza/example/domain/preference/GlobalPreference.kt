@@ -1,14 +1,10 @@
 package id.kudzoza.example.domain.preference
 
-import android.content.Context
-import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import androidx.core.content.edit
-import dagger.hilt.android.qualifiers.ApplicationContext
 import id.kudzoza.core.AppConfig.DEFAULT_LANGUAGE
 import id.kudzoza.core.PreferenceKey
 import id.kudzoza.core.data.model.ProfileModel
-import id.kudzoza.core.di.qualifier.EnvApplicationId
 import id.kudzoza.core.di.qualifier.EnvVersionCode
 import id.kudzoza.core.di.qualifier.EnvVersionName
 import id.kudzoza.core.util.json
@@ -19,10 +15,11 @@ import javax.inject.Inject
  * Created by Kudzoza
  * on 08/02/2022
  **/
-class GlobalPreference @Inject constructor(
+class GlobalPreference
+@Inject constructor(
     @EnvVersionName private val versionName: String,
     @EnvVersionCode private val versionCode: Int,
-    private val preferences : SharedPreferences
+    private val preferences: SharedPreferences,
 ) {
 
     fun storeAccessToken(token: String) {

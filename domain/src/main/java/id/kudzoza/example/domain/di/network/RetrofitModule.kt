@@ -19,7 +19,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RetrovitModule {
+object RetrofitModule {
 
     @DefaultRetrofitClient
     @Provides

@@ -3,12 +3,9 @@ package id.kudzoza.example
 import android.app.Application
 import androidx.core.net.toUri
 import com.google.firebase.FirebaseApp
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
 import id.kudzoza.core.AppNavigator
-import id.kudzoza.core.di.qualifier.EnvApplicationId
 import java.util.*
-import javax.inject.Inject
 
 /**
  * Created by Kudzoza

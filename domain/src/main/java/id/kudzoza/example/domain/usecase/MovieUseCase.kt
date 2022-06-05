@@ -5,8 +5,8 @@ import id.kudzoza.core.util.rError
 import id.kudzoza.core.util.rFinish
 import id.kudzoza.core.util.rLoading
 import id.kudzoza.core.util.rSuccess
-import id.kudzoza.example.domain.preference.GlobalPreference
 import id.kudzoza.example.domain.model.MovieModel
+import id.kudzoza.example.domain.preference.GlobalPreference
 import id.kudzoza.example.domain.repository.MovieRepository
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow

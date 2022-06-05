@@ -27,21 +27,29 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(
     override fun onResume() {
         super.onResume()
         if (isViewed)
-            vm.getMovies()
+            vm.callEvent(MovieEvent.MoviesRequest)
     }
 
     override fun onViewReady() = with(binding) {
         recycler.layoutManager = LinearLayoutManager(requireContext())
         recycler.adapter = MovieAdapter {
-            MovieFragmentDirections.actionMovieFragmentToDetailFragment(json(it))
+            vm.callEvent(MovieEvent.MovieClicked(it))
         }
 
-        refresh.setOnRefreshListener { vm.getMovies() }
-        action.setOnClickListener { vm.getMovies() }
+        refresh.setOnRefreshListener {
+            vm.callEvent(MovieEvent.MoviesRequest)
+        }
+
+        action.setOnClickListener {
+            vm.callEvent(MovieEvent.MovieRefresh)
+        }
     }
 
     override fun registerObserver() = with(vm) {
         movieList.observe(viewLifecycleOwner, ::eventMovieList)
+        eventMovieClicked.observe(viewLifecycleOwner) {
+            MovieFragmentDirections.actionMovieFragmentToDetailFragment(json(it))
+        }
     }
 
     private fun eventMovieList(movies: Resource<List<MovieModel>>) = with(binding) {

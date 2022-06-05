@@ -2,14 +2,17 @@ package id.kudzoza.example.example.screen.movie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import id.kudzoza.core.base.BaseViewModel
+import id.kudzoza.core.base.SingleLiveEvent
 import id.kudzoza.core.data.model.Resource
 import id.kudzoza.core.util.launch
 import id.kudzoza.core.util.main
 import id.kudzoza.example.domain.model.MovieModel
 import id.kudzoza.example.domain.usecase.MovieUseCase
-import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 /**
@@ -24,15 +27,20 @@ class MovieVM @Inject constructor(
 
     private val _movieList: MutableLiveData<Resource<List<MovieModel>>> = MutableLiveData()
     val movieList: LiveData<Resource<List<MovieModel>>> get() = _movieList
+    val eventMovieClicked: SingleLiveEvent<MovieModel> = SingleLiveEvent()
 
-    init {
-        getMovies()
+    fun callEvent(event: MovieEvent) {
+        when (event) {
+            is MovieEvent.MoviesRequest -> getMovies()
+            is MovieEvent.MovieRefresh -> getMovies()
+            is MovieEvent.MovieClicked -> eventMovieClicked.value = event.movie
+        }
     }
 
-    fun getMovies() = launch {
-        movieUseCase.getMovies().collect {
+    private fun getMovies() = launch {
+        movieUseCase.getMovies().onEach {
             main { _movieList.value = it }
-        }
+        }.launchIn(viewModelScope)
     }
 
 }

@@ -4,7 +4,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import id.kudzoza.core.AppNavigator
 import id.kudzoza.core.di.qualifier.*
 import id.kudzoza.example.BuildConfig
 import javax.inject.Singleton
