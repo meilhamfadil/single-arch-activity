@@ -14,7 +14,7 @@ class GlobalVM : BaseViewModel() {
 
     fun callEvent(event: GlobalEvent) {
         when (event) {
-            is GlobalEvent.BackEvent -> eventBack.call()
+            is GlobalEvent.BackPressed -> eventBack.call()
         }
     }
 

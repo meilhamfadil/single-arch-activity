@@ -7,6 +7,7 @@ import id.kudzoza.core.base.BaseFragment
 import id.kudzoza.core.util.areVisible
 import id.kudzoza.core.util.gone
 import id.kudzoza.example.global.databinding.FragmentNotfoundBinding
+import id.kudzoza.example.global.screen.GlobalEvent
 import id.kudzoza.example.global.screen.GlobalVM
 
 /**
@@ -24,6 +25,10 @@ class NotFoundFragment : BaseFragment<FragmentNotfoundBinding>(
     override fun registerViewModel() = vm
 
     override fun onViewReady() = with(binding) {
+        actionBack.setOnClickListener {
+            vm.callEvent(GlobalEvent.BackPressed)
+        }
+
         message.text = arguments?.getString("message") ?: "Page Not Found"
         arguments?.let {
             keyword.text = it.getString("keyword").orEmpty()

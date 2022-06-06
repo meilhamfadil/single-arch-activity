@@ -6,5 +6,5 @@ package id.kudzoza.example.global.screen
  **/
 
 sealed class GlobalEvent {
-    object BackEvent : GlobalEvent()
+    object BackPressed : GlobalEvent()
 }

@@ -56,6 +56,7 @@ class MovieUseCase(
         return flow {
             emit(loadingState())
 
+            delay(1000)
             val movie = movieRepository.getMovie(id)
             if (movie.ok)
                 emit(successState(movie.data))

@@ -5,7 +5,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
-import id.kudzoza.core.AppNavigator
 import id.kudzoza.core.base.BaseFragment
 import id.kudzoza.core.data.model.*
 import id.kudzoza.core.helper.NavigationHelper.openGlobalNotFound
@@ -29,8 +28,10 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(
 
     override fun registerViewModel() = vm
 
-    override fun onViewReady() {
-
+    override fun onViewReady() = with(binding) {
+        toolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     override fun registerObserver() = with(vm) {
@@ -46,7 +47,7 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(
                     "Can\'t find what the movie you\'re looking for",
                     "Movie ID = 0",
                     navOptions {
-                        popUpTo(AppNavigator.featMovies.toString())
+                        popUpTo(R.id.movieFragment)
                     }
                 )
             }
@@ -60,10 +61,6 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(
         Picasso.get()
             .load(movie.poster)
             .into(poster)
-
-        toolbar.setNavigationOnClickListener {
-            findNavController().popBackStack()
-        }
     }
 
 }

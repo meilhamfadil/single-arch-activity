@@ -1,12 +1,10 @@
 package id.kudzoza.core.base
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import id.kudzoza.core.util.showSnackBar
 
@@ -30,7 +28,6 @@ abstract class BaseFragment<VB : ViewBinding>(
         savedInstanceState: Bundle?,
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        Log.d("BACK-STACK", findNavController().backQueue.size.toString())
         return rootView
     }
 

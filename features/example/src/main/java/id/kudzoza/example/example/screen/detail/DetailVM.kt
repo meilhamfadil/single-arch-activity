@@ -8,9 +8,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import id.kudzoza.core.base.BaseViewModel
 import id.kudzoza.core.data.model.DataState
 import id.kudzoza.core.util.launch
-import id.kudzoza.core.util.main
 import id.kudzoza.example.data.domain.MovieUseCase
 import id.kudzoza.example.data.model.MovieModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject

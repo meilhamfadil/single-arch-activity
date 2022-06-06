@@ -2,9 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/landing_navigation">
-
-    <include app:graph="@navigation/landing_navigation" />
+    app:startDestination="@id/example_navigation">
 
     <include app:graph="@navigation/example_navigation" />
 
