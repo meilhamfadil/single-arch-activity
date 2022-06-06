@@ -9,6 +9,10 @@ import android.net.Uri
 
 object AppNavigator {
 
+    lateinit var globalNotFound: Uri
+
+    lateinit var globalMaintenance: Uri
+
     lateinit var featSplash: Uri
 
     lateinit var featMovies: Uri

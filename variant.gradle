@@ -1,22 +1,26 @@
 android {
     flavorDimensions "version"
 
-    def appName = "Example"
+    def appName = "Example Arch"
+    def dbName = "example-arch-db"
 
     productFlavors {
         development {
             resValue "string", "app_name", "${appName} Dev"
+            buildConfigField 'String', 'DATABASE_NAME', "\"${dbName}-dev\""
             buildConfigField 'String', 'API_URL', '"https://meilhamfadil.github.io"'
         }
 
         demo {
             applicationIdSuffix ".demo"
             resValue "string", "app_name", "${appName} Demo"
+            buildConfigField 'String', 'DATABASE_NAME', "\"${dbName}-demo\""
             buildConfigField 'String', 'API_URL', '"https://meilhamfadil.github.io"'
         }
 
         production {
             resValue "string", "app_name", "${appName}"
+            buildConfigField 'String', 'DATABASE_NAME', "\"${dbName}\""
             buildConfigField 'String', 'API_URL', '"https://meilhamfadil.github.io"'
         }
     }

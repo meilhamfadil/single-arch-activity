@@ -9,8 +9,8 @@ import id.kudzoza.core.base.SingleLiveEvent
 import id.kudzoza.core.data.model.DataState
 import id.kudzoza.core.util.launch
 import id.kudzoza.core.util.main
-import id.kudzoza.example.domain.model.MovieModel
-import id.kudzoza.example.domain.usecase.MovieUseCase
+import id.kudzoza.example.data.model.MovieModel
+import id.kudzoza.example.data.domain.MovieUseCase
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject

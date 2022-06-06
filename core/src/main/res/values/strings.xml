@@ -16,6 +16,8 @@
     <string name="app_refresh">Refresh</string>
     <string name="app_ok">OK</string>
     <string name="app_message">Message</string>
+    <string name="app_back">Back</string>
+    <string name="app_go_back">Go Back</string>
     <string name="app_double_back">Press back again to exit</string>
     <string name="app_empty" />
 

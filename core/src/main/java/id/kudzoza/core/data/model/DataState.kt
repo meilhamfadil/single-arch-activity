@@ -8,6 +8,7 @@ package id.kudzoza.core.data.model
 sealed class DataState<out T> {
     class Success<T>(val data: T?) : DataState<T>()
     class Error(val message: String) : DataState<Nothing>()
+    object Empty : DataState<Nothing>()
     object Loading : DataState<Nothing>()
     object Finish : DataState<Nothing>()
 }

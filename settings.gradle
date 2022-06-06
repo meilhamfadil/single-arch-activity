@@ -1,7 +1,8 @@
 rootProject.name = "Single Arch"
 include ':app'
 include ':core'
-include ':domain'
+include ':data'
 include ':features'
 include ':features:example'
 include ':features:landing'
+include ':features:global'

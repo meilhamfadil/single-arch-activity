@@ -79,16 +79,6 @@ abstract class BaseFragment<VB : ViewBinding>(
     abstract fun registerViewModel(): BaseViewModel
 
     /**
-     * registerObserver
-     * to be overridden on the main fragment class
-     * this method will be launch after
-     * - setupBaseEvent has been called
-     *
-     * this method will register all the main event inside fragment
-     */
-    abstract fun registerObserver()
-
-    /**
      * onViewReady
      * to be overridden on the main fragment class
      * this method will be launch after
@@ -100,5 +90,15 @@ abstract class BaseFragment<VB : ViewBinding>(
      * this method will contain all the main logic for fragment
      */
     abstract fun onViewReady()
+
+    /**
+     * registerObserver
+     * to be overridden on the main fragment class
+     * this method will be launch after
+     * - setupBaseEvent has been called
+     *
+     * this method will register all the main event inside fragment
+     */
+    abstract fun registerObserver()
 
 }

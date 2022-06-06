@@ -2,6 +2,7 @@ package id.kudzoza.example.landing.screen.splash
 
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import dagger.hilt.android.AndroidEntryPoint
 import id.kudzoza.core.AppNavigator
 import id.kudzoza.core.base.BaseFragment
@@ -25,8 +26,9 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(
 
     override fun registerObserver() = with(vm) {
         moveToMain.observe(requireActivity()) {
-            findNavController().popBackStack()
-            findNavController().navigateModule(AppNavigator.featMovies)
+            findNavController().navigateModule(
+                AppNavigator.featMovies
+            )
         }
     }
 

@@ -3,11 +3,16 @@ package id.kudzoza.example.example.screen.detail
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import id.kudzoza.core.base.BaseViewModel
+import id.kudzoza.core.data.model.DataState
 import id.kudzoza.core.util.launch
-import id.kudzoza.example.domain.model.MovieModel
-import id.kudzoza.example.domain.usecase.MovieUseCase
+import id.kudzoza.core.util.main
+import id.kudzoza.example.data.domain.MovieUseCase
+import id.kudzoza.example.data.model.MovieModel
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 /**
@@ -21,18 +26,24 @@ class DetailVM @Inject constructor(
     private val movieUseCase: MovieUseCase,
 ) : BaseViewModel() {
 
-    private val _movie: MutableLiveData<MovieModel?> = MutableLiveData()
-    val movie: LiveData<MovieModel?> get() = _movie
+    private val _movie: MutableLiveData<DataState<MovieModel>> = MutableLiveData()
+    val movie: LiveData<DataState<MovieModel>> get() = _movie
 
     init {
         showDetail()
     }
 
     private fun showDetail() {
-        _movie.value = savedStateHandle.get("MOVIE")
-        launch {
-            movieUseCase.getMovies()
-        }
+        val id: Int? = savedStateHandle.get("movie")
+        if (id == null)
+            eventShowDefaultNotFound.call()
+        else
+            launch {
+                val movie = movieUseCase.getMovie(id)
+                movie.onEach {
+                    _movie.value = it
+                }.launchIn(viewModelScope)
+            }
     }
 
 }

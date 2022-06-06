@@ -26,3 +26,7 @@ annotation class EnvVersionCode
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class EnvVersionName
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class EnvDatabaseName

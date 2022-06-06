@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/example_navigation">
 
     <fragment
         android:id="@+id/movieFragment"
         android:name="id.kudzoza.example.example.screen.movie.MovieFragment"
-        android:label="MovieFragment">
+        android:label="MovieFragment"
+        tools:layout="@layout/fragment_movie">
         <deepLink app:uri="android-app://${applicationId}/movie" />
         <action
             android:id="@+id/action_movieFragment_to_detailFragment"
@@ -16,10 +18,11 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="id.kudzoza.example.example.screen.detail.DetailFragment"
-        android:label="DetailFragment">
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
         <argument
-            android:name="MOVIE"
-            app:argType="id.kudzoza.example.domain.model.MovieModel" />
+            android:name="movie"
+            app:argType="integer" />
     </fragment>
 
 </navigation>

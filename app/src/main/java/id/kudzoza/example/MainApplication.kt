@@ -21,6 +21,9 @@ class MainApplication : Application() {
 
         val applicationId = BuildConfig.APPLICATION_ID
         AppNavigator.apply {
+            globalNotFound = "android-app://$applicationId/notfound".toUri()
+            globalMaintenance = "android-app://$applicationId/maintenance".toUri()
+
             featSplash = "android-app://$applicationId/splash".toUri()
             featMovies = "android-app://$applicationId/movie".toUri()
         }

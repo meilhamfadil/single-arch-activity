@@ -12,4 +12,6 @@ abstract class BaseViewModel : ViewModel() {
     val eventShowMessage = SingleLiveEvent<String>()
     val eventShowMessageRes = SingleLiveEvent<String>()
 
+    val eventShowDefaultNotFound = SingleLiveEvent<Void>()
+
 }
