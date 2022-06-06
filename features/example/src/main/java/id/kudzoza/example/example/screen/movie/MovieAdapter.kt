@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import id.kudzoza.example.domain.model.MovieModel
+import id.kudzoza.example.data.model.MovieModel
 import id.kudzoza.example.example.databinding.ItemMovieBinding
 
 /**

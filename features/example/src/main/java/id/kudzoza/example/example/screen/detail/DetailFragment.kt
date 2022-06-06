@@ -5,7 +5,7 @@ import androidx.navigation.fragment.findNavController
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 import id.kudzoza.core.base.BaseFragment
-import id.kudzoza.example.domain.model.MovieModel
+import id.kudzoza.example.data.model.MovieModel
 import id.kudzoza.example.example.databinding.FragmentDetailBinding
 
 /**

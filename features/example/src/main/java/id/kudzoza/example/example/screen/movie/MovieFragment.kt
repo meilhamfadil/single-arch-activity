@@ -7,7 +7,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import id.kudzoza.core.base.BaseFragment
 import id.kudzoza.core.data.model.*
 import id.kudzoza.core.util.catchToNull
-import id.kudzoza.example.domain.model.MovieModel
+import id.kudzoza.core.util.gone
+import id.kudzoza.core.util.visible
+import id.kudzoza.example.data.model.MovieModel
 import id.kudzoza.example.example.databinding.FragmentMovieBinding
 
 /**
@@ -46,17 +48,20 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(
     }
 
     override fun registerObserver() = with(vm) {
+
         movieList.observe(viewLifecycleOwner, ::eventMovieList)
+
         eventMovieClicked.observe(viewLifecycleOwner) {
             val action = MovieFragmentDirections.actionMovieFragmentToDetailFragment(it)
             findNavController().navigate(action)
         }
+
     }
 
     private fun eventMovieList(movies: DataState<List<MovieModel>>) = with(binding) {
         movies.resource {
             loading {
-                action.setLoading(true)
+                action.gone()
                 refresh.isRefreshing = true
             }
             success {
@@ -66,7 +71,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(
                 vm.eventShowMessage.value = it.message
             }
             finish {
-                action.setLoading(false)
+                action.visible()
                 refresh.isRefreshing = false
             }
         }

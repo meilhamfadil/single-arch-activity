@@ -18,8 +18,8 @@
         android:name="id.kudzoza.example.example.screen.detail.DetailFragment"
         android:label="DetailFragment">
         <argument
-            android:name="MOVIE"
-            app:argType="id.kudzoza.example.domain.model.MovieModel" />
+            android:name="movie"
+            app:argType="id.kudzoza.example.data.model.MovieModel" />
     </fragment>
 
 </navigation>

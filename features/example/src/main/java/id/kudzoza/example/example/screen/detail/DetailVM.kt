@@ -6,8 +6,8 @@ import androidx.lifecycle.SavedStateHandle
 import dagger.hilt.android.lifecycle.HiltViewModel
 import id.kudzoza.core.base.BaseViewModel
 import id.kudzoza.core.util.launch
-import id.kudzoza.example.domain.model.MovieModel
-import id.kudzoza.example.domain.usecase.MovieUseCase
+import id.kudzoza.example.data.model.MovieModel
+import id.kudzoza.example.data.domain.MovieUseCase
 import javax.inject.Inject
 
 /**
@@ -29,7 +29,7 @@ class DetailVM @Inject constructor(
     }
 
     private fun showDetail() {
-        _movie.value = savedStateHandle.get("MOVIE")
+        _movie.value = savedStateHandle.get("movie")
         launch {
             movieUseCase.getMovies()
         }

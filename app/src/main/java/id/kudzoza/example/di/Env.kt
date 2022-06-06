@@ -42,4 +42,9 @@ object Env {
     @Singleton
     fun provideApplicationAuthorities(): String = BuildConfig.APPLICATION_ID + ".provider"
 
+    @EnvDatabaseName
+    @Provides
+    @Singleton
+    fun provideDatabaseName(): String = BuildConfig.DATABASE_NAME
+
 }
