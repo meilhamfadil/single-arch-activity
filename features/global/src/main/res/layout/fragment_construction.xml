@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="@string/app_maintenance"
+        android:text="@string/app_construction"
         android:textColor="@color/color_tertiary" />
 
     <TextView

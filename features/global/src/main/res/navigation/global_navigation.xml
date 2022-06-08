@@ -2,8 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/global_navigation"
-    app:startDestination="@id/notFoundFragment">
+    android:id="@+id/global_navigation">
 
     <fragment
         android:id="@+id/notFoundFragment"
@@ -19,6 +18,22 @@
             app:argType="string"
             app:nullable="true" />
         <deepLink app:uri="android-app://${applicationId}/notfound?keyword={keyword}&amp;message={message}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/maintenanceFragment"
+        android:name="id.kudzoza.example.global.screen.maintenance.MaintenanceFragment"
+        android:label="MaintenanceFragment"
+        tools:layout="@layout/fragment_maintenance">
+        <deepLink app:uri="android-app://${applicationId}/maintenance" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/constructionFragment"
+        android:name="id.kudzoza.example.global.screen.construction.ConstructionFragment"
+        android:label="ConstructionFragment"
+        tools:layout="@layout/fragment_construction">
+        <deepLink app:uri="android-app://${applicationId}/construction" />
     </fragment>
 
 

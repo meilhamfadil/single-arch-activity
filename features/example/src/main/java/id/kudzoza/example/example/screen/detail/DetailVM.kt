@@ -10,7 +10,6 @@ import id.kudzoza.core.data.model.DataState
 import id.kudzoza.core.util.launch
 import id.kudzoza.example.data.domain.MovieUseCase
 import id.kudzoza.example.data.model.MovieModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
@@ -34,16 +33,13 @@ class DetailVM @Inject constructor(
     }
 
     private fun showDetail() {
-        val id: Int? = savedStateHandle.get("movie")
-        if (id == null)
-            eventShowDefaultNotFound.call()
-        else
+        savedStateHandle.get<Int>("movie")?.let {
             launch {
-                val movie = movieUseCase.getMovie(id)
-                movie.onEach {
-                    _movie.value = it
-                }.launchIn(viewModelScope)
+                movieUseCase.getMovie(it)
+                    .onEach { _movie.value = it }
+                    .launchIn(viewModelScope)
             }
+        } ?: eventShowDefaultNotFound.call()
     }
 
 }

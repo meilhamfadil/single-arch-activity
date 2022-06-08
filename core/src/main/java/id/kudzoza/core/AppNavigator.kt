@@ -13,6 +13,8 @@ object AppNavigator {
 
     lateinit var globalMaintenance: Uri
 
+    lateinit var globalConstruction: Uri
+
     lateinit var featSplash: Uri
 
     lateinit var featMovies: Uri

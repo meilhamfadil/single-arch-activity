@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/PT GITS Indonesia/StudioProjects/single-arch-activity/app/src/main/res/layout/single_activity.xml" value="0.25" />
+        <entry key="..\:/Users/PT GITS Indonesia/StudioProjects/single-arch-activity/app/src/main/res/layout/splash_activity.xml" value="0.25" />
         <entry key="..\:/Users/PT GITS Indonesia/StudioProjects/single-arch-activity/features/example/src/main/res/layout/fragment_detail.xml" value="0.23148148148148148" />
+        <entry key="..\:/Users/PT GITS Indonesia/StudioProjects/single-arch-activity/features/example/src/main/res/layout/fragment_movie.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/PT GITS Indonesia/StudioProjects/single-arch-activity/features/global/src/main/res/layout/fragment_construction.xml" value="0.25" />
+        <entry key="..\:/Users/PT GITS Indonesia/StudioProjects/single-arch-activity/features/global/src/main/res/layout/fragment_maintenance.xml" value="0.25" />
         <entry key="..\:/Users/PT GITS Indonesia/StudioProjects/single-arch-activity/features/global/src/main/res/layout/fragment_notfound.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/PT GITS Indonesia/StudioProjects/single-arch-activity/features/landing/src/main/res/layout/fragment_splash.xml" value="0.24635416666666668" />
         <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/layout/layout_header_menu.xml" value="0.25" />
         <entry key="..\:/Users/meilh/StudioProjects/nippobulary/app/src/main/res/layout/single_activity.xml" value="0.209375" />

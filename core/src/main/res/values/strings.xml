@@ -19,6 +19,8 @@
     <string name="app_back">Back</string>
     <string name="app_go_back">Go Back</string>
     <string name="app_double_back">Press back again to exit</string>
+    <string name="app_maintenance">Under Maintenance</string>
+    <string name="app_construction">Under Construction</string>
     <string name="app_empty" />
 
 </resources>

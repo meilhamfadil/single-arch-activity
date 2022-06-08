@@ -5,7 +5,6 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import id.kudzoza.core.base.BaseFragment
 import id.kudzoza.core.util.areVisible
-import id.kudzoza.core.util.gone
 import id.kudzoza.example.global.databinding.FragmentNotfoundBinding
 import id.kudzoza.example.global.screen.GlobalEvent
 import id.kudzoza.example.global.screen.GlobalVM
@@ -29,15 +28,21 @@ class NotFoundFragment : BaseFragment<FragmentNotfoundBinding>(
             vm.callEvent(GlobalEvent.BackPressed)
         }
 
-        message.text = arguments?.getString("message") ?: "Page Not Found"
-        arguments?.let {
-            keyword.text = it.getString("keyword").orEmpty()
-            keyword.visibility = it.getString("keyword").isNullOrEmpty().not().areVisible()
-        } ?: keyword.gone()
+        val argMessage = arguments?.getString("message") ?: "Page not found"
+        val argKeyword = arguments?.getString("keyword") ?: ""
+        renderNotFound(argMessage, argKeyword)
+    }
+
+    private fun renderNotFound(argMessage: String, argKeyword: String) = with(binding) {
+        message.text = argMessage
+        keyword.text = argKeyword
+        keyword.visibility = (argKeyword.isEmpty() || argKeyword.isBlank()).areVisible()
     }
 
     override fun registerObserver() = with(vm) {
-        eventBack.observe(viewLifecycleOwner) { findNavController().popBackStack() }
+        eventBack.observe(viewLifecycleOwner) {
+            findNavController().popBackStack()
+        }
     }
 
 }

@@ -29,7 +29,7 @@ object NavigationHelper {
         navigate(request, navOptions)
     }
 
-    fun NavController.openGlobalNotFound(
+    fun NavController.openNotFoundPage(
         message: String = "",
         keyword: String = "",
         navOptions: NavOptions? = null,
@@ -43,5 +43,24 @@ object NavigationHelper {
             navOptions
         )
     }
+
+    fun NavController.openMaintenancePage(
+        navOptions: NavOptions? = null,
+    ) {
+        navigateModule(
+            AppNavigator.globalMaintenance,
+            navOptions = navOptions
+        )
+    }
+
+    fun NavController.openConstructionPage(
+        navOptions: NavOptions? = null,
+    ) {
+        navigateModule(
+            AppNavigator.globalConstruction,
+            navOptions = navOptions
+        )
+    }
+
 
 }

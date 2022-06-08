@@ -23,6 +23,7 @@ class MainApplication : Application() {
         AppNavigator.apply {
             globalNotFound = "android-app://$applicationId/notfound".toUri()
             globalMaintenance = "android-app://$applicationId/maintenance".toUri()
+            globalConstruction = "android-app://$applicationId/construction".toUri()
 
             featSplash = "android-app://$applicationId/splash".toUri()
             featMovies = "android-app://$applicationId/movie".toUri()

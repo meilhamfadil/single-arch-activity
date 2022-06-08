@@ -7,7 +7,8 @@ import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 import id.kudzoza.core.base.BaseFragment
 import id.kudzoza.core.data.model.*
-import id.kudzoza.core.helper.NavigationHelper.openGlobalNotFound
+import id.kudzoza.core.helper.NavigationHelper.openConstructionPage
+import id.kudzoza.core.helper.NavigationHelper.openNotFoundPage
 import id.kudzoza.core.util.hideProgress
 import id.kudzoza.core.util.showProgress
 import id.kudzoza.example.data.model.MovieModel
@@ -29,6 +30,12 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(
     override fun registerViewModel() = vm
 
     override fun onViewReady() = with(binding) {
+        findNavController().openConstructionPage(
+            navOptions {
+                popUpTo(R.id.movieFragment)
+            }
+        )
+
         toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
@@ -41,9 +48,9 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(
     private fun eventMovie(movie: DataState<MovieModel>) = with(binding) {
         movie.state {
             loading { requireActivity().showProgress() }
-            success { it?.let { it1 -> renderMovie(it1) } }
+            success { it?.let { m -> renderMovie(m) } }
             error {
-                findNavController().openGlobalNotFound(
+                findNavController().openNotFoundPage(
                     "Can\'t find what the movie you\'re looking for",
                     "Movie ID = 0",
                     navOptions {
